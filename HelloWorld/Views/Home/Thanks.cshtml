@@ -1,0 +1,20 @@
+﻿@model HelloWorld.Models.GuestResponse
+
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<h1>Hi @Model.Name</h1>
+@if (Model.WillAttend == true)
+{
+    @:Thanks for coming!
+    <h1> @Model.Name, we will email you the directions at <a href="mailto:@Model.Email">@Model.Email</a></h1>
+}
+else
+{
+    @:Sorry you can't make it.
+}
