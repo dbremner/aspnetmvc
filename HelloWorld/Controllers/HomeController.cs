@@ -10,7 +10,19 @@ namespace HelloWorld.Controllers
     public class HomeController : Controller
     {
 
+        // GET: Home
         public ActionResult Index()
+        {
+            int x = 1;  // add me
+            x = x / (x - 1); // add me
+            return View();
+        }
+
+        //protected override void OnException(ExceptionContext filterContext)
+        //{
+        //    base.OnException(filterContext);
+        //}
+        public ActionResult Error()
         {
             return View();
         }
